@@ -1,18 +1,8 @@
-#include "Gomoku.h"
-#include "Observer.h"
 #include <stdio.h>
 
-void DrawWiner(int turn)
-{
-	switch (turn % 2)
-	{
-		case 1: printf("흑돌이 승리하였습니다."); break;
-		case 0: printf("백돌이 승리하였습니다."); break;
-	}
-}
-
-
-
+#include "Gomoku.h"
+#include "Observer.h"
+#include "UI.h"
 
 
 int main()
@@ -27,10 +17,10 @@ int main()
 		Input(gomoku);
 		CheckStones(gomoku);
 		DrawCursor(gomoku);
+		DrawGameInfo(gomoku);
 		ScreenFlipping();
-		Sleep(5);
+		Sleep(20);
 	}
-	ScreenRelease();
 	DrawWiner(gomoku->turn);
 	GameExit(gomoku);
 }

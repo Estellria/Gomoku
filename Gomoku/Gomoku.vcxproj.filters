@@ -30,7 +30,10 @@
     <ClCompile Include="Observer.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Vector.c">
+    <ClCompile Include="Vector2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -51,6 +54,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Observer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

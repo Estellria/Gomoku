@@ -22,7 +22,7 @@ void gotoxy(int x, int y)
 
 
 // 0 ~ 15 까지 색상 설정 가능
-void SetColor(unsigned short color)
+void SetColor(int color)
 {
     SetConsoleTextAttribute(g_hScreen[g_nScreenIndex], color);
 }

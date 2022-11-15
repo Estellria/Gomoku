@@ -28,6 +28,4 @@ void SetStone(Gomoku* gomoku);
 
 void GameExit(Gomoku* gomoku);
 
-void DrawCursor(Gomoku* gomoku);
-
 void MoveCursor(Gomoku* gomoku);

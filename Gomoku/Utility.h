@@ -7,7 +7,7 @@ void ScreenInit();
 
 void ScreenClear(int width, int height);
 
-void SetColor(unsigned short color);
+void SetColor(int color);
 
 void ScreenPrint(int x, int y, char* string);
 

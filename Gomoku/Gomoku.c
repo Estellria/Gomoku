@@ -70,18 +70,6 @@ void GameExit(Gomoku* gomoku)
 
 
 
-void DrawCursor(Gomoku* gomoku)
-{
-	Vector2 tempVec = gomoku->cursorPos;
-
-	if (!ExistStone(gomoku->board, gomoku->cursorPos)) 
-	{
-		ScreenPrint(tempVec.x, tempVec.y, "¢Â");
-	}
-}
-
-
-
 
 void MoveCursor(Gomoku* gomoku)
 {
@@ -102,4 +90,4 @@ void MoveCursor(Gomoku* gomoku)
 		Vector2 tempVec = { x,y };
 		gomoku->cursorPos = tempVec;
 	}
-}	
+}

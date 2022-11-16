@@ -4,8 +4,6 @@ void DrawGameInfo(Gomoku* gomoku);
 
 void DrawBox(Vector2 pivot, Vector2 size);
 
-void DrawWiner(Gomoku* gomoku);
-
 void DrawTurn(int turn, Vector2 pivot);
 
 void DrawStoneCount(int turn, Vector2 pivot, eCELLTYPE type);

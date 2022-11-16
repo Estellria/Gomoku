@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 #include "Gomoku.h"
 #include "Observer.h"
 #include "UI.h"
@@ -21,6 +19,6 @@ int main()
 		ScreenFlipping();
 		Sleep(20);
 	}
-	DrawWiner(gomoku->turn);
+	DrawResult(gomoku->turn, bingoPosList);
 	GameExit(gomoku);
 }

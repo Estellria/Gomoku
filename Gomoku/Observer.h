@@ -2,6 +2,11 @@
 #include "Gomoku.h"
 
 
+static Vector2 bingoPosList[5];
+
+
 void CheckStones(Gomoku* gomoku);
 
 void CheckBingo(Gomoku* gomoku, Vector2 pos, int condition, Vector2 offset);
+
+void EndSet(Gomoku* gomoku, Vector2* posList);

@@ -2,7 +2,6 @@
 #include <conio.h>
 #include <stdio.h>
 
-
 Gomoku* Init(int width, int height)
 {
 	ScreenInit();
@@ -89,5 +88,46 @@ void MoveCursor(Gomoku* gomoku)
 	{
 		Vector2 tempVec = { x,y };
 		gomoku->cursorPos = tempVec;
+	}
+}
+
+
+
+
+
+void DrawResult(Vector2* bingoList, int turn) 
+{
+	DrawBingoStones(bingoList);
+	Sleep(50000);
+
+	ScreenRelease();
+	DrawWiner(turn);
+}
+
+
+
+
+void DrawBingoStones(Vector2* bingoList)
+{
+	SetColor(12);
+	for (int i = 0; i < 5; ++i)
+	{
+		int x = bingoList[i].x;
+		int y = bingoList[i].y;
+		ScreenPrint(x, y, "●");
+	}
+	ScreenFlipping();
+	SetColor(7);
+}
+
+
+
+
+void DrawWiner(int turn)
+{
+	switch (turn % 2)
+	{
+		case 1: printf("흑돌이 승리하였습니다."); break;
+		case 0: printf("백돌이 승리하였습니다."); break;
 	}
 }

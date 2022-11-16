@@ -20,6 +20,8 @@ void InitailizeBoard(Board* board)
 
 
 
+
+
 void DrawBoard(Board* board, Vector2 cursor) 
 {
 	for (int col = 0; col < board->height; ++col) {
@@ -35,11 +37,13 @@ void DrawBoard(Board* board, Vector2 cursor)
 
 
 
+
 int ExistStone(Board* board, Vector2 pos) 
 {
 	int isStone = board->board[pos.y][pos.x].type == STONEBLACK;
 	return isStone || (board->board[pos.y][pos.x].type == STONEWHITE);
 }
+
 
 
 

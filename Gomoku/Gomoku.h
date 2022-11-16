@@ -29,3 +29,9 @@ void SetStone(Gomoku* gomoku);
 void GameExit(Gomoku* gomoku);
 
 void MoveCursor(Gomoku* gomoku);
+
+void DrawResult(Vector2* bingoList, int turn);
+
+void DrawBingoStones(Vector2* bingoList);
+
+void DrawWiner(int turn);

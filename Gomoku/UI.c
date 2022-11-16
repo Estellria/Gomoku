@@ -46,20 +46,6 @@ void DrawBox(Vector2 pivot, Vector2 size)
 
 
 
-void DrawWiner(Gomoku* gomuku)
-{
-	ScreenRelease();
-
-	switch (gomuku->turn % 2)
-	{
-		case 1: printf("흑돌이 승리하였습니다."); break;
-		case 0: printf("백돌이 승리하였습니다."); break;
-	}
-}
-
-
-
-
 
 void DrawStoneCount(int turn, Vector2 pivot, eCELLTYPE type)
 {

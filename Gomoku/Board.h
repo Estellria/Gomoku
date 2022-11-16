@@ -13,7 +13,7 @@ typedef struct __board
 
 
 void InitailizeBoard(Board* board);
-void DrawBoard(Board* board, Vector2 cursor);
+void DrawBoard(Board* board);
 
 int ExistStone(Board* board, Vector2 pos);
 int OutOfRange(Board* board, int x, int y);

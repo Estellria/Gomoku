@@ -22,7 +22,7 @@ void InitailizeBoard(Board* board)
 
 
 
-void DrawBoard(Board* board, Vector2 cursor) 
+void DrawBoard(Board* board) 
 {
 	for (int col = 0; col < board->height; ++col) {
 		for (int row = 0; row < board->width; ++row) {

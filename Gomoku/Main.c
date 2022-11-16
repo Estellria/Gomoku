@@ -1,11 +1,11 @@
 #include "Gomoku.h"
-#include "Observer.h"
 #include "UI.h"
 
 
 int main()
 {
 	Gomoku* gomoku = Init(19, 19);
+	Vector2* list = ListInit();
 
 	while (gomoku->continuable)
 	{
@@ -13,12 +13,12 @@ int main()
 		DrawBoard(gomoku->board, gomoku->cursorPos);
 
 		Input(gomoku);
+		DrawGameInfo(gomoku);
 		CheckStones(gomoku);
 		DrawCursor(gomoku);
-		DrawGameInfo(gomoku);
 		ScreenFlipping();
 		Sleep(20);
 	}
-	DrawResult(gomoku->turn, bingoPosList);
+	DrawResult(list, gomoku->turn);
 	GameExit(gomoku);
 }

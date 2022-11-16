@@ -1,4 +1,5 @@
 #include "Gomoku.h"
+#include "Observer.h"
 #include <conio.h>
 #include <stdio.h>
 
@@ -62,6 +63,7 @@ void SetStone(Gomoku* gomoku)
 
 void GameExit(Gomoku* gomoku)
 {
+	free(bingoPosList);
 	free(gomoku->board);
 	free(gomoku);
 }
@@ -98,7 +100,7 @@ void MoveCursor(Gomoku* gomoku)
 void DrawResult(Vector2* bingoList, int turn) 
 {
 	DrawBingoStones(bingoList);
-	Sleep(50000);
+	Sleep(2500);
 
 	ScreenRelease();
 	DrawWiner(turn);
@@ -109,13 +111,16 @@ void DrawResult(Vector2* bingoList, int turn)
 
 void DrawBingoStones(Vector2* bingoList)
 {
+	ScreenFlipping();
 	SetColor(12);
+
 	for (int i = 0; i < 5; ++i)
 	{
 		int x = bingoList[i].x;
 		int y = bingoList[i].y;
 		ScreenPrint(x, y, "¡Ü");
 	}
+
 	ScreenFlipping();
 	SetColor(7);
 }

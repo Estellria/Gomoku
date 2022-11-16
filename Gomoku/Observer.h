@@ -2,8 +2,9 @@
 #include "Gomoku.h"
 
 
-static Vector2 bingoPosList[5];
+static Vector2* bingoPosList;
 
+Vector2* ListInit();
 
 void CheckStones(Gomoku* gomoku);
 

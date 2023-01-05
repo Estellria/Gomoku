@@ -10,7 +10,7 @@ int main()
 	while (gomoku->continuable)
 	{
 		ScreenClear(40, 40);
-		DrawBoard(gomoku->board, gomoku->cursorPos);
+		DrawBoard(gomoku->board);
 
 		Input(gomoku);
 		DrawGameInfo(gomoku);
